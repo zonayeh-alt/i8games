@@ -7,10 +7,21 @@ import OrchestrationPanel from "./components/OrchestrationPanel";
 import CorporatePortal from "./components/CorporatePortal";
 import { Gamepad2, Settings, MessageSquare, Flame, Sparkles, Cpu, Layers, Star, Briefcase } from "lucide-react";
 
+// ES module imports for default character avatars
+import keplerImg from "./assets/images/i8_games_kepler_1779356801323.png";
+import syndicateImg from "./assets/images/i8_games_syndicate_1779356820789.png";
+import aegisImg from "./assets/images/i8_games_aegis_1779356837462.png";
+import ariaImg from "./assets/images/i8_games_aria_1779359254346.png";
+
 export default function App() {
   const [activeCharacterId, setActiveCharacterId] = useState("kaelen");
   const [activeTab, setActiveTab] = useState<"playground" | "portal">("portal");
-  const [characterAvatars, setCharacterAvatars] = useState<Record<string, string>>({});
+  const [characterAvatars, setCharacterAvatars] = useState<Record<string, string>>({
+    kaelen: keplerImg,
+    vespera: syndicateImg,
+    torin: aegisImg,
+    aria: ariaImg,
+  });
   const [chats, setChats] = useState<Record<string, ChatMessage[]>>({});
   const [settings, setSettings] = useState<OrchestrationSettings>({
     temperature: 0.7,

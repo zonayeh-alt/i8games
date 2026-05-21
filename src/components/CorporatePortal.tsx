@@ -15,11 +15,15 @@ import {
   LineChart 
 } from "lucide-react";
 
-// Paths to high-fidelity generated images
+// ES module imports so Vite bundles and hashes these resources
+import keplerImg from "../assets/images/i8_games_kepler_1779356801323.png";
+import syndicateImg from "../assets/images/i8_games_syndicate_1779356820789.png";
+import aegisImg from "../assets/images/i8_games_aegis_1779356837462.png";
+
 const IMAGES = {
-  kepler: "/src/assets/images/i8_games_kepler_1779356801323.png",
-  syndicate: "/src/assets/images/i8_games_syndicate_1779356820789.png",
-  aegis: "/src/assets/images/i8_games_aegis_1779356837462.png"
+  kepler: keplerImg,
+  syndicate: syndicateImg,
+  aegis: aegisImg
 };
 
 interface CorporatePortalProps {
