@@ -36,6 +36,65 @@ export default function ChatWindow({
 
   const activeScenario = scenarios.find((s) => s.id === activeScenarioId) || scenarios[0];
 
+  const getSuggestedPrompts = (charId: string, scenarioId: string): string[] => {
+    switch (charId) {
+      case "kaelen":
+        if (scenarioId === "sci-fi") {
+          return [
+            "Establish warp telemetry towards the singularity.",
+            "Initiate auxiliary thermal scan for spatial rifts.",
+            "Explain the historical status of the Equinox ship."
+          ];
+        }
+        return [
+          "Describe your celestial astrolabe calibration.",
+          "What warp speed threshold is stable?",
+          "Are we tracked by security sensors?"
+        ];
+      case "vespera":
+        if (scenarioId === "cyberpunk") {
+          return [
+            "We need to bypass the local security firewall.",
+            "Can you access the encrypted subnet-9 data?",
+            "What cybernetic cyberware are you using?"
+          ];
+        }
+        return [
+          "Explain your credentials for deep-net access.",
+          "Generate a synthetic hacker decryption routine.",
+          "Scan the local corporations for alerts."
+        ];
+      case "torin":
+        if (scenarioId === "fantasy") {
+          return [
+            "Form our combat obsidian phalanx shield!",
+            "Sound the alarms on the sentinel parapet.",
+            "Ready the broadsword for defensive war stance."
+          ];
+        }
+        return [
+          "What is your sacred vow as standard-bearer?",
+          "Describe the historic siege of Obsidian walls.",
+          "Check the fortress ammo and logistics status."
+        ];
+      case "aria":
+        if (scenarioId === "planar") {
+          return [
+            "Weave the soft Leyline incantation spell.",
+            "Can you calm down the restless starlight moths?",
+            "Where does this shimmering blue gateway lead?"
+          ];
+        }
+        return [
+          "Explain how you emerged from the starlight well.",
+          "Inspect the active planar mana levels.",
+          "Sing a song of origin lore in this forest."
+        ];
+      default:
+        return ["State your status report.", "Who are you?", "Initiate primary contact."];
+    }
+  };
+
   // Keep chat scrolled automatically
   useEffect(() => {
     chatBottomRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -345,7 +404,25 @@ export default function ChatWindow({
       )}
 
       {/* Input Action Panel */}
-      <div className="bg-slate-950 border-t border-slate-850 p-4">
+      <div className="bg-slate-950 border-t border-slate-850 p-4 space-y-3">
+        {/* Suggestion Starter Pills */}
+        <div className="flex items-center gap-2 overflow-x-auto pb-1.5 custom-scrollbar shrink-0 select-none">
+          <span className="text-[10px] font-mono text-indigo-400 font-semibold uppercase tracking-wider shrink-0 mr-1">Suggestions:</span>
+          {getSuggestedPrompts(activeCharacter.id, activeScenarioId).map((promptText, idx) => (
+            <button
+              key={idx}
+              type="button"
+              disabled={isSending}
+              onClick={() => {
+                setInputText(promptText);
+              }}
+              className="text-[10.5px] font-sans px-3 py-1 bg-slate-900 border border-slate-800 hover:border-indigo-500 hover:bg-slate-850 text-slate-350 hover:text-white rounded-full transition-all shrink-0 cursor-pointer duration-150 font-medium italic"
+            >
+              "{promptText}"
+            </button>
+          ))}
+        </div>
+
         <form onSubmit={handleSend} className="flex gap-2 items-center">
           {/* Refresh/Regenerate last response */}
           <button
@@ -383,7 +460,7 @@ export default function ChatWindow({
                 ? "Listening... Speak now..."
                 : `Command ${activeCharacter.name}...`
             }
-            className="flex-1 bg-slate-900 text-white text-xs px-4 py-3 rounded-xl border border-slate-800 focus:outline-hidden focus:border-indigo-500 placeholder-slate-600 disabled:opacity-60"
+            className="flex-1 bg-slate-900 text-white text-xs px-4 py-3 rounded-xl border border-slate-800 focus:outline-hidden focus:border-indigo-500 placeholder-slate-600 disabled:opacity-60 font-sans"
           />
 
           {/* Send submission */}
