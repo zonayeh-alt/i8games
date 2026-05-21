@@ -4,10 +4,12 @@ import { OrchestrationSettings, ChatMessage, LogEntry } from "./types";
 import CharacterSheet from "./components/CharacterSheet";
 import ChatWindow from "./components/ChatWindow";
 import OrchestrationPanel from "./components/OrchestrationPanel";
-import { Gamepad2, Settings, MessageSquare, Flame, Sparkles, Cpu, Layers, Star } from "lucide-react";
+import CorporatePortal from "./components/CorporatePortal";
+import { Gamepad2, Settings, MessageSquare, Flame, Sparkles, Cpu, Layers, Star, Briefcase } from "lucide-react";
 
 export default function App() {
   const [activeCharacterId, setActiveCharacterId] = useState("kaelen");
+  const [activeTab, setActiveTab] = useState<"playground" | "portal">("portal");
   const [characterAvatars, setCharacterAvatars] = useState<Record<string, string>>({});
   const [chats, setChats] = useState<Record<string, ChatMessage[]>>({});
   const [settings, setSettings] = useState<OrchestrationSettings>({
@@ -338,7 +340,7 @@ export default function App() {
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col font-sans" id="i8-root-container">
       {/* Immersive Platform Header Banner */}
-      <header className="border-b border-slate-905 bg-slate-950 px-6 py-4 flex flex-col md:flex-row items-center justify-between gap-4">
+      <header className="border-b border-slate-900 bg-slate-950 px-6 py-4 flex flex-col md:flex-row items-center justify-between gap-4">
         <div className="space-y-0.5">
           <div className="flex items-center gap-2.5">
             <Gamepad2 className="w-6 h-6 text-indigo-500" />
@@ -354,126 +356,169 @@ export default function App() {
           </p>
         </div>
 
+        {/* Corporate/Playground Tab Switcher */}
+        <div className="flex bg-slate-900 border border-slate-800 p-1 rounded-xl shrink-0 shadow-lg select-none">
+          <button
+            onClick={() => {
+              setActiveTab("portal");
+              addLog("Switched view to i8 Games Strategic Transition Portal.", "info");
+            }}
+            className={`px-4 py-2 rounded-lg text-xs font-bold font-sans flex items-center gap-1.5 transition-all cursor-pointer ${
+              activeTab === "portal"
+                ? "bg-indigo-600 text-white shadow-md shadow-indigo-600/10"
+                : "text-slate-400 hover:text-white"
+            }`}
+          >
+            <Briefcase className="w-3.5 h-3.5" /> Strategic Roadmap
+          </button>
+          <button
+            onClick={() => {
+              setActiveTab("playground");
+              addLog("Initialized live interactive Multi-Agent simulation.", "info");
+            }}
+            className={`px-4 py-2 rounded-lg text-xs font-bold font-sans flex items-center gap-1.5 transition-all cursor-pointer ${
+              activeTab === "playground"
+                ? "bg-indigo-600 text-white shadow-md shadow-indigo-600/10"
+                : "text-slate-400 hover:text-white"
+            }`}
+          >
+            <Gamepad2 className="w-3.5 h-3.5" /> Interactive Sandbox
+          </button>
+        </div>
+
         {/* Corporate brief explaining transitioning */}
-        <div className="max-w-md hidden lg:block text-slate-400 rounded-lg p-3 bg-slate-900/50 border border-slate-800/80 text-[10px] leading-normal font-sans">
+        <div className="max-w-xs hidden lg:block text-slate-400 rounded-lg p-3 bg-slate-900/50 border border-slate-800/80 text-[10px] leading-normal font-sans">
           <div className="font-semibold text-slate-350 flex items-center gap-1 mb-0.5 text-[11px] uppercase tracking-wider">
             <Layers className="w-3.5 h-3.5 text-indigo-400" />
-            <span>SI transition to branded original game IP (2026 launch Roadmap)</span>
+            <span>Core Flagship Product Roadmap</span>
           </div>
-          Transitioning from custom integration (SI) to owning high-end multi-agent game franchises. Driven by low-latency edge inference networks and multimodal soundscapes.
+          Flagship generative entertainment platform powered by custom low-latency Vertex AI inference models.
         </div>
       </header>
 
-      {/* Main Container Grid */}
+      {/* Main Container */}
       <main className="flex-1 p-6 space-y-6 max-w-[1700px] w-full mx-auto flex flex-col">
-        
-        {/* Horizontal Character Catalogue Selectors */}
-        <div className="space-y-3.5">
-          <div className="flex items-center gap-1.5 text-xs font-mono uppercase tracking-widest text-indigo-400 font-semibold">
-            <Star className="w-4 h-4 text-indigo-400" />
-            <span>Select Active Character Persona Engine</span>
-          </div>
+        {activeTab === "portal" ? (
+          /* Corporate Roadmap Portal with rich descriptions and images */
+          <CorporatePortal 
+            onSelectCharacter={(charId) => {
+              setActiveCharacterId(charId);
+              addLog(`Aligned sandbox node to Character node: "${charId}"`);
+            }}
+            onSelectTab={setActiveTab}
+          />
+        ) : (
+          /* Interactive Demo Multi-agent Sandbox Playground */
+          <div className="space-y-6 flex flex-col flex-1 animate-fade-in">
+            {/* Horizontal Character Catalogue Selectors */}
+            <div className="space-y-3.5">
+              <div className="flex items-center gap-1.5 text-xs font-mono uppercase tracking-widest text-indigo-400 font-semibold">
+                <Star className="w-4 h-4 text-indigo-400" />
+                <span>Select Active Character Persona Engine</span>
+              </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3.5">
-            {PRESET_CHARACTERS.map((char) => {
-              const isActive = char.id === activeCharacterId;
-              const hasCustomAvatar = characterAvatars[char.id];
-              return (
-                <button
-                  key={char.id}
-                  onClick={() => {
-                    setActiveCharacterId(char.id);
-                    addLog(`Connected focus channel to Character node: "${char.name}"`);
-                  }}
-                  className={`text-left p-4 rounded-xl border bg-slate-900/80 transition-all cursor-pointer relative overflow-hidden flex flex-col justify-between h-32 select-none ${
-                    isActive
-                      ? "ring-2 ring-indigo-500 border-transparent bg-indigo-950/20"
-                      : renderCharacterBadgeColor(char.id)
-                  }`}
-                >
-                  {/* Floating badge for active */}
-                  {isActive && (
-                    <span className="absolute top-3 right-3 flex h-2 w-2">
-                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
-                      <span className="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
-                    </span>
-                  )}
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-3.5">
+                {PRESET_CHARACTERS.map((char) => {
+                  const isActive = char.id === activeCharacterId;
+                  const hasCustomAvatar = characterAvatars[char.id];
+                  return (
+                    <button
+                      key={char.id}
+                      onClick={() => {
+                        setActiveCharacterId(char.id);
+                        addLog(`Connected focus channel to Character node: "${char.name}"`);
+                      }}
+                      className={`text-left p-4 rounded-xl border bg-slate-900/80 transition-all cursor-pointer relative overflow-hidden flex flex-col justify-between h-32 select-none ${
+                        isActive
+                          ? "ring-2 ring-indigo-500 border-transparent bg-indigo-950/20"
+                          : renderCharacterBadgeColor(char.id)
+                      }`}
+                    >
+                      {/* Floating badge for active */}
+                      {isActive && (
+                        <span className="absolute top-3 right-3 flex h-2 w-2">
+                          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
+                          <span className="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
+                        </span>
+                      )}
 
-                  <div className="space-y-1">
-                    <div className="text-[10px] font-mono text-slate-500 uppercase tracking-widest leading-none">
-                      {char.gameName}
-                    </div>
-                    <h3 className="text-sm font-sans font-extrabold tracking-tight text-white mt-1">
-                      {char.name}
-                    </h3>
-                  </div>
-
-                  <div className="flex items-center gap-3.5 mt-3">
-                    {hasCustomAvatar ? (
-                      <img
-                        src={hasCustomAvatar}
-                        className="w-10 h-10 rounded-full border border-indigo-500 object-cover"
-                        alt={char.name}
-                        referrerPolicy="no-referrer"
-                      />
-                    ) : (
-                      <div className="w-10 h-10 rounded-full bg-slate-950 text-slate-400 border border-slate-800 flex items-center justify-center font-bold text-xs">
-                        {char.name.charAt(0)}
+                      <div className="space-y-1">
+                        <div className="text-[10px] font-mono text-slate-500 uppercase tracking-widest leading-none">
+                          {char.gameName}
+                        </div>
+                        <h3 className="text-sm font-sans font-extrabold tracking-tight text-white mt-1">
+                          {char.name}
+                        </h3>
                       </div>
-                    )}
-                    <div className="space-y-0.5">
-                      <p className="text-[11px] text-slate-400 leading-none">{char.title}</p>
-                      <span className="text-[9px] font-mono text-indigo-400">Vocal: {char.voiceName}</span>
-                    </div>
-                  </div>
-                </button>
-              );
-            })}
-          </div>
-        </div>
 
-        {/* 3-Column Bento Playground Layout */}
-        <div className="grid grid-cols-1 xl:grid-cols-12 gap-5 flex-1 min-h-[600px]">
-          {/* Col 1 (Static sheets / avatars) - span 4 */}
-          <div className="xl:col-span-4 h-full">
-            <CharacterSheet
-              character={{
-                ...activeCharacter,
-                avatarUrl: characterAvatars[activeCharacter.id]
-              }}
-              onAvatarGenerated={handleAvatarGenerated}
-              logs={addLog}
-            />
-          </div>
+                      <div className="flex items-center gap-3.5 mt-3">
+                        {hasCustomAvatar ? (
+                          <img
+                            src={hasCustomAvatar}
+                            className="w-10 h-10 rounded-full border border-indigo-500 object-cover"
+                            alt={char.name}
+                            referrerPolicy="no-referrer"
+                          />
+                        ) : (
+                          <div className="w-10 h-10 rounded-full bg-slate-950 text-slate-400 border border-slate-800 flex items-center justify-center font-bold text-xs">
+                            {char.name.charAt(0)}
+                          </div>
+                        )}
+                        <div className="space-y-0.5">
+                          <p className="text-[11px] text-slate-400 leading-none">{char.title}</p>
+                          <span className="text-[9px] font-mono text-indigo-400">Vocal: {char.voiceName}</span>
+                        </div>
+                      </div>
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
 
-          {/* Col 2 (Interactive dialog logs) - span 5 */}
-          <div className="xl:col-span-5 h-full">
-            <ChatWindow
-              messages={activeChat}
-              scenarios={SCENARIOS}
-              activeScenarioId={settings.activeScenarioId}
-              activeCharacter={activeCharacter}
-              isSending={isSending}
-              onSendMessage={handleSendMessage}
-              onSelectScenario={handleSelectScenario}
-              onRegenerateResponse={handleRegenerateResponse}
-              logs={addLog}
-            />
-          </div>
+            {/* 3-Column Bento Playground Layout */}
+            <div className="grid grid-cols-1 xl:grid-cols-12 gap-5 flex-1 min-h-[600px]">
+              {/* Col 1 (Static sheets / avatars) - span 4 */}
+              <div className="xl:col-span-4 h-full">
+                <CharacterSheet
+                  character={{
+                    ...activeCharacter,
+                    avatarUrl: characterAvatars[activeCharacter.id]
+                  }}
+                  onAvatarGenerated={handleAvatarGenerated}
+                  logs={addLog}
+                />
+              </div>
 
-          {/* Col 3 (Developer Orchestrator dashboard) - span 3 */}
-          <div className="xl:col-span-3 h-full">
-            <OrchestrationPanel
-              settings={settings}
-              activeCharacter={activeCharacter}
-              scenarios={SCENARIOS}
-              logs={logs}
-              hasGeminiKey={hasGeminiKey}
-              onSettingsChange={(updated) => setSettings((prev) => ({ ...prev, ...updated }))}
-              onClearLogs={() => setLogs([])}
-            />
+              {/* Col 2 (Interactive dialog logs) - span 5 */}
+              <div className="xl:col-span-5 h-full">
+                <ChatWindow
+                  messages={activeChat}
+                  scenarios={SCENARIOS}
+                  activeScenarioId={settings.activeScenarioId}
+                  activeCharacter={activeCharacter}
+                  isSending={isSending}
+                  onSendMessage={handleSendMessage}
+                  onSelectScenario={handleSelectScenario}
+                  onRegenerateResponse={handleRegenerateResponse}
+                  logs={addLog}
+                />
+              </div>
+
+              {/* Col 3 (Developer Orchestrator dashboard) - span 3 */}
+              <div className="xl:col-span-3 h-full">
+                <OrchestrationPanel
+                  settings={settings}
+                  activeCharacter={activeCharacter}
+                  scenarios={SCENARIOS}
+                  logs={logs}
+                  hasGeminiKey={hasGeminiKey}
+                  onSettingsChange={(updated) => setSettings((prev) => ({ ...prev, ...updated }))}
+                  onClearLogs={() => setLogs([])}
+                />
+              </div>
+            </div>
           </div>
-        </div>
+        )}
       </main>
 
       {/* Humble page footer */}
