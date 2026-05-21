@@ -1,0 +1,6 @@
+{
+  "name": "i8 Games",
+  "description": "Proprietary generative AI-native interactive entertainment platform by i8 Games, featuring multi-character conversational LLM chat, text-to-speech audio interactions, real-time avatar generation, and custom prompt workflow orchestration.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
