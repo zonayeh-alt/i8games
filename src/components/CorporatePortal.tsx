@@ -12,7 +12,9 @@ import {
   Compass, 
   Zap, 
   ChevronRight, 
-  LineChart 
+  LineChart,
+  Mail,
+  Info
 } from "lucide-react";
 
 // ES module imports so Vite bundles and hashes these resources
@@ -39,17 +41,17 @@ export default function CorporatePortal({ onSelectCharacter, onSelectTab }: Corp
         <div className="absolute top-0 right-0 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none -mr-16 -mt-16" />
         <div className="absolute bottom-0 left-0 w-80 h-80 bg-purple-500/5 rounded-full blur-3xl pointer-events-none -ml-16 -mb-16" />
         
-        <div className="space-y-4 max-w-2xl relative z-10">
+        <div className="space-y-4 max-w-4xl relative z-10">
           <div className="inline-flex items-center gap-2 px-3 py-1 bg-indigo-950/80 text-indigo-400 font-mono text-[10px] font-bold uppercase tracking-widest rounded-full border border-indigo-900/60">
             <span className="w-1.5 h-1.5 rounded-full bg-indigo-400 animate-pulse" />
-            2026 Strategic Flagship Initiative
+            2026 Generative Entertainment Initiative
           </div>
           <h2 className="text-3xl md:text-5xl font-black tracking-tight text-white leading-tight font-sans">
             OWNING THE FUTURE <br />
             OF GAMES WITH <span className="text-indigo-500">VERTEX AI</span>
           </h2>
-          <p className="text-sm text-slate-400 leading-relaxed max-w-xl">
-            i8s.games is undergoing a definitive strategic transition from a System Integrator (SI) model to building proprietary franchises, original game IP, and deep-context interactive universes powered by enterprise-tier Generative AI.
+          <p className="text-sm text-slate-400 leading-relaxed max-w-2xl">
+            i8s.games is dedicated to building proprietary franchises, original game IP, and deep-context interactive universes powered by enterprise-tier Generative AI including multi-character personas and realistic vocal synthesis.
           </p>
           <div className="flex flex-wrap gap-4 pt-2">
             <button
@@ -59,49 +61,25 @@ export default function CorporatePortal({ onSelectCharacter, onSelectTab }: Corp
               <Zap className="w-4 h-4" /> Launch Live Demo Playground
             </button>
             <a
-              href="#workloads"
+              href="#solutions"
               className="px-5 py-3 bg-slate-900 hover:bg-slate-850 text-slate-200 border border-slate-800 rounded-xl font-semibold font-sans text-xs flex items-center gap-2 duration-150 transition-colors cursor-pointer"
             >
-              Explore AI Architecture <ChevronRight className="w-3.5 h-3.5 text-slate-500" />
+              Explore Tech Solutions <ChevronRight className="w-3.5 h-3.5 text-slate-500" />
             </a>
-          </div>
-        </div>
-
-        {/* Dynamic transition metrics HUD */}
-        <div className="grid grid-cols-2 gap-4 w-full md:w-80 relative z-10 shrink-0">
-          <div className="bg-slate-950/70 border border-slate-850 p-4 rounded-2xl flex flex-col justify-between h-28 backdrop-blur-md">
-            <span className="text-[10px] text-indigo-400 font-bold uppercase tracking-wider font-mono">Transition Progress</span>
-            <div className="text-2xl font-black font-sans text-white">SI → Own IP</div>
-            <div className="text-[10px] text-emerald-400 font-mono font-medium">Flagship Roadmap Active</div>
-          </div>
-          <div className="bg-slate-950/70 border border-slate-850 p-4 rounded-2xl flex flex-col justify-between h-28 backdrop-blur-md">
-            <span className="text-[10px] text-purple-400 font-bold uppercase tracking-wider font-mono">Launch Window</span>
-            <div className="text-2xl font-black font-sans text-white">Q1 2026</div>
-            <div className="text-[10px] text-indigo-400 font-mono font-medium">Vertex Core Verified</div>
-          </div>
-          <div className="bg-slate-950/70 border border-slate-850 p-4 rounded-2xl flex flex-col justify-between h-28 backdrop-blur-md">
-            <span className="text-[10px] text-emerald-400 font-bold uppercase tracking-wider font-mono">Workload Type</span>
-            <div className="text-2xl font-black font-sans text-white">GenAI Native</div>
-            <div className="text-[10px] text-slate-500 font-mono">LLM Multi-Agent</div>
-          </div>
-          <div className="bg-slate-950/70 border border-slate-850 p-4 rounded-2xl flex flex-col justify-between h-28 backdrop-blur-md">
-            <span className="text-[10px] text-amber-500 font-bold uppercase tracking-wider font-mono">Infrastructure</span>
-            <div className="text-2xl font-black font-sans text-white">Vertex Cloud</div>
-            <div className="text-[10px] text-slate-500 font-mono">TPU Cloud Host</div>
           </div>
         </div>
       </div>
 
-      {/* Flagship Game Titles Showcase with Real Images */}
+      {/* Demo References Showcase with Real Images */}
       <div className="space-y-4">
         <div className="flex items-center gap-2">
           <Layers className="w-5 h-5 text-indigo-400" />
           <h3 className="text-lg font-bold font-sans tracking-tight text-white uppercase">
-            FLAGSHIP 2026 GAME RELEASES (ORIGINAL IP)
+            AI Demo References
           </h3>
         </div>
         <p className="text-xs text-slate-500 max-w-3xl leading-relaxed">
-          These upcoming proprietary releases feature integrated multimodal AI capabilities, leveraging low-latency streaming text outputs, customized vocal modulations, and adaptive scenario contexts.
+          These interactive reference demos showcase integrated multimodal AI capabilities, leveraging low-latency streaming text outputs, customized vocal modulations, and adaptive multi-character persona contexts.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -212,102 +190,135 @@ export default function CorporatePortal({ onSelectCharacter, onSelectTab }: Corp
         </div>
       </div>
 
-      {/* Business Profile Clarification Section */}
-      <div id="clarification" className="bg-slate-900/40 border border-slate-850 rounded-2xl p-6 md:p-8 space-y-4">
-        <div className="flex items-center gap-2.5">
-          <Briefcase className="w-5 h-5 text-indigo-400" />
-          <h3 className="text-base font-bold font-sans uppercase text-white tracking-tight">Business Profile Clarification</h3>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs leading-relaxed text-slate-400">
-          <div>
-            <p className="mb-3">
-              Historically, <strong>i8s.games</strong> has operated as an esteemed System Integrator (SI). However, this interface documents a fundamental pivot: building <strong>fully-owned proprietary products, original game titles, and long-term immersive IP</strong>.
-            </p>
-            <p>
-              This enterprise platform represents a core flagship initiative aimed at a worldwide launch in 2026. This development path was planned in close collaboration with cloud and AI strategists to deploy state-of-the-art model inference infrastructure.
-            </p>
+      {/* About Us & Business Collaboration Sections */}
+      <div id="about-us" className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div className="lg:col-span-2 bg-slate-900/40 border border-slate-850 rounded-2xl p-6 md:p-8 space-y-4">
+          <div className="flex items-center gap-2.5">
+            <Info className="w-5 h-5 text-indigo-400" />
+            <h3 className="text-base font-bold font-sans uppercase text-white tracking-tight">About Us</h3>
           </div>
-          <div>
-            <p className="mb-3">
-              The goal of integrating <strong>Vertex AI</strong> is to replace standard predetermined event-branch trees with an independent, non-scripted multi-character chat and dynamic avatar generator system that respects character logic.
-            </p>
-            <div className="bg-slate-950 border border-slate-850/80 p-3 rounded-lg flex items-center gap-3">
-              <Dna className="w-5 h-5 text-indigo-400 flex-shrink-0" />
-              <div>
-                <p className="text-[10px] font-mono text-slate-500 uppercase font-semibold leading-none">Strategic Alignment</p>
-                <p className="text-xs text-white leading-normal mt-1">
-                  100% proprietary assets, full content ownership, & secure enterprise workloads.
-                </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs leading-relaxed text-slate-400">
+            <div>
+              <p className="mb-3">
+                <strong>i8s.games</strong> 是一家前瞻性的生成式娛樂科技公司，我們核心專注於<strong>生成多角色個性 (Multi-character Personas) 語境與 lifelike 擬真語音對話 (Vocal Synthetics)</strong> 的底層技術，打造全新的沈浸式 AI 互動體驗。
+              </p>
+              <p>
+                透過深度整合領先的多模態自然語言處理模型，我們致力於打破傳統依循預設指令碼的遊戲樹，讓每個不玩家的角色都擁有獨立的思維、持續的記憶和極富張力的聲音演繹。
+              </p>
+            </div>
+            <div>
+              <p className="mb-4">
+                Our advanced development framework enables gaming systems to dynamically spin up infinite non-scripted AI agents, each with high-fidelity vocal delivery, responsive contextual comprehension, and specialized world-lore compliance.
+              </p>
+              <div className="bg-slate-950 border border-slate-850/80 p-3 rounded-lg flex items-center gap-3">
+                <Dna className="w-5 h-5 text-indigo-400 flex-shrink-0" />
+                <div>
+                  <p className="text-[10px] font-mono text-slate-500 uppercase font-semibold leading-none">Core Technology Specialty</p>
+                  <p className="text-xs text-white leading-normal mt-1">
+                    Innovative multi-agent personality models and latency-optimized dynamic voice-casting engines.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
+
+        {/* Business Collaboration Card */}
+        <div className="bg-gradient-to-br from-indigo-950/40 to-slate-900 border border-indigo-500/20 rounded-2xl p-6 md:p-8 flex flex-col justify-between space-y-4 relative overflow-hidden shadow-xl">
+          <div className="absolute top-0 right-0 w-32 h-32 bg-indigo-500/10 rounded-full blur-2xl pointer-events-none -mr-8 -mt-8" />
+          
+          <div className="space-y-2 relative z-10">
+            <div className="inline-flex items-center gap-2 px-2.5 py-0.5 bg-indigo-950 text-indigo-400 font-mono text-[9px] font-bold uppercase tracking-wider rounded border border-indigo-900">
+              Partnership
+            </div>
+            <h4 className="text-sm font-extrabold text-white uppercase tracking-tight font-sans">
+              Business Collaboration
+            </h4>
+            <p className="text-xs text-slate-400 leading-normal">
+              Interested in integrating our cutting-edge multi-character and voice generative framework into your productions? Get in touch with our partnerships office.
+            </p>
+          </div>
+
+          <div className="space-y-3 pt-2 relative z-10">
+            <span className="text-[10px] text-indigo-400 font-bold uppercase tracking-wider font-mono block">Contact Us</span>
+            <a
+              href="mailto:info@i8.games"
+              className="w-full py-3 px-4 bg-indigo-600 hover:bg-indigo-500 text-white rounded-xl text-xs font-bold font-sans flex items-center justify-center gap-2.5 transition-all shadow-md shadow-indigo-650/20 hover:scale-[1.01] duration-150 cursor-pointer text-center"
+            >
+              <Mail className="w-4 h-4" />
+              <span>info@i8.games</span>
+            </a>
+            <p className="text-[9px] text-center text-slate-500 font-mono">
+              Typical response time: within 24 hours
+            </p>
+          </div>
+        </div>
       </div>
 
-      {/* Custom Workloads & Use Cases */}
-      <div id="workloads" className="scroll-mt-6 space-y-6">
+      {/* Custom Solutions & Technical References */}
+      <div id="solutions" className="scroll-mt-6 space-y-6">
         <div className="flex items-center gap-2">
           <Cpu className="w-5 h-5 text-indigo-400" />
           <h3 className="text-lg font-bold font-sans tracking-tight text-white uppercase">
-            VERTEX AI WORKLOADS &amp; TECHNOLOGY COVERAGE
+            CORE GENERATIVE SOLUTIONS &amp; TECHNICAL REFERENCES
           </h3>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {/* Workload 1 */}
+          {/* Solution 1 */}
           <div className="bg-slate-900 border border-slate-850 p-6 rounded-2xl space-y-3.5 flex flex-col justify-between">
             <div className="space-y-3">
               <div className="w-10 h-10 bg-indigo-950 rounded-xl flex items-center justify-center border border-indigo-900/60">
                 <Bot className="w-5 h-5 text-indigo-400" />
               </div>
-              <h4 className="text-sm font-extrabold text-white">1. Generative Character Chat</h4>
+              <h4 className="text-sm font-extrabold text-white">1. Multi-Character Persona Synthesis</h4>
               <ul className="text-xs text-slate-400 space-y-2 list-disc pl-4 leading-relaxed">
-                <li>Multi-character system equipped with unique personality parameters.</li>
-                <li>Context-aware dialogue containing long-term memory structures.</li>
-                <li>Persistent conversational states across multiple scenes and quest bounds.</li>
-                <li>Dynamic story progression responding specifically to user decisions.</li>
+                <li>Multi-character systems equipped with deep memory, lore constraints, and context compliance.</li>
+                <li>Dynamic story progression responding to custom parameters, emotional depth, and user interaction.</li>
+                <li>Persistent conversational threads that remember core relationships across scenes and quests.</li>
+                <li>Scalable templates for spinning up customized brand, lore, or assistant personas instantly.</li>
               </ul>
             </div>
             <div className="text-[10px] font-mono text-indigo-400 font-semibold bg-indigo-950/40 px-2 py-1 rounded w-fit border border-indigo-900/40 mt-3">
-              Powered by Vertex GenAI LLM
+              Multi-Agent Engine Active
             </div>
           </div>
 
-          {/* Workload 2 */}
+          {/* Solution 2 */}
           <div className="bg-slate-900 border border-slate-850 p-6 rounded-2xl space-y-3.5 flex flex-col justify-between">
             <div className="space-y-3">
               <div className="w-10 h-10 bg-indigo-950 rounded-xl flex items-center justify-center border border-indigo-900/60 font-mono">
                 <Sparkles className="w-5 h-5 text-indigo-400" />
               </div>
-              <h4 className="text-sm font-extrabold text-white">2. Multimodal Generation</h4>
+              <h4 className="text-sm font-extrabold text-white">2. Lifelike Vocal Synthetics</h4>
               <ul className="text-xs text-slate-400 space-y-2 list-disc pl-4 leading-relaxed">
-                <li>Non-scripted text generation determining reactive non-player character behaviour.</li>
-                <li>Low-latency Text-to-Speech (TTS) for atmospheric voice-enabled interactions.</li>
-                <li>Integrated Speech-to-Text (STT) parsing natural spoken voice client commands.</li>
-                <li>Evaluation of Imagen-2.5-Image for character avatar tailoring and visual assets.</li>
+                <li>Dynamic low-latency Text-to-Speech (TTS) delivering rich atmospheric voice-enabled reactions.</li>
+                <li>Adaptive voice modeling matching distinct emotional levels and specialized speaker traits on-the-fly.</li>
+                <li>Integrated soundscapes and dynamic audio cues triggered through context analyses.</li>
+                <li>Optimized streaming audio chunking ensuring no delays during live gameplay conversation.</li>
               </ul>
             </div>
             <div className="text-[10px] font-mono text-indigo-400 font-semibold bg-indigo-950/40 px-2 py-1 rounded w-fit border border-indigo-900/40 mt-3">
-              Multimodal Inference Layer
+              Dynamic Vocal Synthesizer
             </div>
           </div>
 
-          {/* Workload 3 */}
+          {/* Solution 3 */}
           <div className="bg-slate-900 border border-slate-850 p-6 rounded-2xl space-y-3.5 flex flex-col justify-between">
             <div className="space-y-3">
               <div className="w-10 h-10 bg-indigo-950 rounded-xl flex items-center justify-center border border-indigo-900/60">
                 <Layers className="w-5 h-5 text-indigo-400" />
               </div>
-              <h4 className="text-sm font-extrabold text-white">3. Orchestration &amp; Workflows</h4>
+              <h4 className="text-sm font-extrabold text-white">3. Prompt Orchestration &amp; References</h4>
               <ul className="text-xs text-slate-400 space-y-2 list-disc pl-4 leading-relaxed">
-                <li>Continuous runtime context summaries matching dialogue states.</li>
-                <li>Variable-temperature inference for predictable vs. creative modes.</li>
-                <li>Enterprise safety standards preventing lore violations and out-of-character drift.</li>
-                <li>Response optimization and iterative self-critique/regeneration loops.</li>
+                <li>Fully verifiable pipelines proxying server-side model inferences securely.</li>
+                <li>Custom orchestration logs capturing prompt templates, input vectors, and token bounds.</li>
+                <li>Safety guardrails intercepting inappropriate material instantly to maintain compliance.</li>
+                <li>Production-grade deployment templates for scalable, high-throughput entertainment setups.</li>
               </ul>
             </div>
             <div className="text-[10px] font-mono text-indigo-400 font-semibold bg-indigo-950/40 px-2 py-1 rounded w-fit border border-indigo-900/40 mt-3">
-              App Orchestration Gateway
+              Orchestrator Reference Layer
             </div>
           </div>
         </div>
