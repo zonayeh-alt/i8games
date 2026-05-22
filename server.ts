@@ -92,7 +92,7 @@ const getSimulatedResponse = (
       break;
 
     default:
-      text = "Hello! I am a general gaming AI agent at i8 Games. We are currently evaluating Vertex AI Gemini models.";
+      text = "Hello! I am a general gaming AI agent at i8s.games. We are currently evaluating Vertex AI Gemini models.";
   }
 
   return { text, durationMs: 400 };
@@ -103,7 +103,7 @@ app.get("/api/config", (req, res) => {
   const hasKey = !!getApiKeyString();
   res.json({
     hasKey,
-    info: "i8 Games AI Platform Orchestration Hub Active",
+    info: "i8s.games AI Platform Orchestration Hub Active",
     models: ["gemini-3.5-flash", "gemini-3.1-pro-preview", "gemini-3.1-flash-tts-preview", "gemini-2.5-flash-image"],
   });
 });
@@ -335,7 +335,7 @@ async function startServer() {
   }
 
   app.listen(PORT, "0.0.0.0", () => {
-    console.log(`[i8 Games Server] Running on http://localhost:${PORT} under NODE_ENV=${process.env.NODE_ENV}`);
+    console.log(`[i8s.games Server] Running on http://localhost:${PORT} under NODE_ENV=${process.env.NODE_ENV}`);
   });
 }
 

@@ -49,7 +49,7 @@ export default function CorporatePortal({ onSelectCharacter, onSelectTab }: Corp
             OF GAMES WITH <span className="text-indigo-500">VERTEX AI</span>
           </h2>
           <p className="text-sm text-slate-400 leading-relaxed max-w-xl">
-            i8 Games is undergoing a definitive strategic transition from a System Integrator (SI) model to building proprietary franchises, original game IP, and deep-context interactive universes powered by enterprise-tier Generative AI.
+            i8s.games is undergoing a definitive strategic transition from a System Integrator (SI) model to building proprietary franchises, original game IP, and deep-context interactive universes powered by enterprise-tier Generative AI.
           </p>
           <div className="flex flex-wrap gap-4 pt-2">
             <button
@@ -221,7 +221,7 @@ export default function CorporatePortal({ onSelectCharacter, onSelectTab }: Corp
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs leading-relaxed text-slate-400">
           <div>
             <p className="mb-3">
-              Historically, <strong>i8 Games</strong> has operated as an esteemed System Integrator (SI). However, this interface documents a fundamental pivot: building <strong>fully-owned proprietary products, original game titles, and long-term immersive IP</strong>.
+              Historically, <strong>i8s.games</strong> has operated as an esteemed System Integrator (SI). However, this interface documents a fundamental pivot: building <strong>fully-owned proprietary products, original game titles, and long-term immersive IP</strong>.
             </p>
             <p>
               This enterprise platform represents a core flagship initiative aimed at a worldwide launch in 2026. This development path was planned in close collaboration with cloud and AI strategists to deploy state-of-the-art model inference infrastructure.
@@ -322,7 +322,7 @@ export default function CorporatePortal({ onSelectCharacter, onSelectTab }: Corp
           </h3>
         </div>
         <p className="text-xs text-slate-500 max-w-3xl leading-relaxed">
-          i8 Games engineers actively analyze Vertex AI model tiers to determine optimal latency-to-quality ratios, especially for low-frequency quest lines vs. rapid-fire conversation pipelines.
+          i8s.games engineers actively analyze Vertex AI model tiers to determine optimal latency-to-quality ratios, especially for low-frequency quest lines vs. rapid-fire conversation pipelines.
         </p>
 
         <div className="bg-slate-900 border border-slate-850 rounded-2xl overflow-hidden overflow-x-auto custom-scrollbar">
@@ -385,7 +385,7 @@ export default function CorporatePortal({ onSelectCharacter, onSelectTab }: Corp
             <ShieldCheck className="w-4 h-4 text-emerald-500" /> Enterprise-Grade Security Controls
           </h4>
           <p className="text-xs text-slate-400 leading-normal mt-1.5">
-            Vertex AI safety parameters are integrated directly within the orchestration loops of i8 Games, blocking offensive, off-topic, or commercially hazardous outputs live at the source.
+            Vertex AI safety parameters are integrated directly within the orchestration loops of i8s.games, blocking offensive, off-topic, or commercially hazardous outputs live at the source.
           </p>
         </div>
         <button

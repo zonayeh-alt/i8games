@@ -74,7 +74,7 @@ export default function App() {
 
   // Check key status on startup
   useEffect(() => {
-    addLog("Initializing i8 Games AI Platform Orchestrator...");
+    addLog("Initializing i8s.games AI Platform Orchestrator...");
     fetch("/api/config")
       .then((res) => {
         if (!res.ok) throw new Error("Status API returned HTTP " + res.status);
@@ -355,8 +355,8 @@ export default function App() {
         <div className="space-y-0.5">
           <div className="flex items-center gap-2.5">
             <Gamepad2 className="w-6 h-6 text-indigo-500" />
-            <h1 className="text-2xl font-black italic tracking-wide text-white uppercase font-sans">
-              i8 <span className="text-indigo-500">Games</span>
+            <h1 className="text-2xl font-black italic tracking-wide text-white font-sans lowercase">
+              i8s<span className="text-indigo-500">.games</span>
             </h1>
             <span className="text-[10px] bg-indigo-950 text-indigo-400 font-mono font-semibold uppercase tracking-wider px-2 py-0.5 rounded border border-indigo-900/60">
               proprietary engine alpha-v3
@@ -372,7 +372,7 @@ export default function App() {
           <button
             onClick={() => {
               setActiveTab("portal");
-              addLog("Switched view to i8 Games Strategic Transition Portal.", "info");
+              addLog("Switched view to i8s.games Strategic Transition Portal.", "info");
             }}
             className={`px-4 py-2 rounded-lg text-xs font-bold font-sans flex items-center gap-1.5 transition-all cursor-pointer ${
               activeTab === "portal"
@@ -534,7 +534,7 @@ export default function App() {
 
       {/* Humble page footer */}
       <footer className="border-t border-slate-900 bg-slate-950 px-6 py-4 flex flex-col md:flex-row items-center justify-between text-[11px] text-slate-600 font-mono gap-3">
-        <span>© 2026 i8 Games Ltd. All rights intellectual property reserved.</span>
+        <span>© 2026 i8s.games Ltd. All rights intellectual property reserved.</span>
         <div className="flex gap-4">
           <a href="#" className="hover:text-indigo-400 transition-colors">Vertex AI Portal</a>
           <span>•</span>
