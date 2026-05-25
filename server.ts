@@ -92,7 +92,7 @@ const getSimulatedResponse = (
       break;
 
     default:
-      text = "Hello! I am a general gaming AI agent at i8s.games. We are currently evaluating Vertex AI Gemini models.";
+      text = "Hello! I am a general gaming AI agent at i8s.games. We are currently evaluating Gaming AI models.";
   }
 
   return { text, durationMs: 400 };
@@ -108,7 +108,7 @@ app.get("/api/config", (req, res) => {
   });
 });
 
-// Endpoint 1: Character Conversational Chat via Vertex AI Gemini
+// Endpoint 1: Character Conversational Chat via Gaming AI Models
 app.post("/api/chat", async (req, res) => {
   const {
 characterId, 
@@ -262,7 +262,7 @@ app.post("/api/generate-avatar", async (req, res) => {
       return res.json({
         success: false,
         simulated: true,
-        message: "Image generation requires actual Vertex AI / Gemini credentials."
+        message: "Image generation requires actual enterprise integration / Gemini credentials."
       });
     }
 
