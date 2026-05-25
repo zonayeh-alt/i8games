@@ -23,7 +23,7 @@ export default function CorporatePortal({ onTriggerContact }: CorporatePortalPro
     if (onTriggerContact) {
       onTriggerContact();
     } else {
-      window.location.href = "mailto:info@i8.games";
+      window.location.href = "mailto:info@i8s.games";
     }
   };
 
@@ -206,9 +206,12 @@ export default function CorporatePortal({ onTriggerContact }: CorporatePortalPro
           </div>
 
           <div className="border-t border-slate-850/60 pt-5 grid grid-cols-1 md:grid-cols-2 gap-6 text-xs text-slate-400">
-            <div className="space-y-2">
+            <div className="space-y-3">
+              <p className="leading-relaxed text-slate-300">
+                Our operations focus fundamentally on the core architecture of generating <strong>multi-character personas</strong> and <strong>lifelike vocal synthetics</strong>, establishing a pristine foundation for immersive interactive AI environments.
+              </p>
               <p className="leading-relaxed text-slate-350">
-                我們核心專注於<strong>生成多角色個性 (Multi-character Personas) 語境與 lifelike 擬真語音對話 (Vocal Synthetics)</strong> 的底層技術，打破傳統依循預設指令碼的遊戲樹演繹。
+                By deeply aligning leading multimodal processing layers, we dismantle rigid, pre-scripted conversational flows, granting on-demand cognitive independence, persistent memory context, and vivid theatrical speech capabilities to every agent.
               </p>
             </div>
             <div className="bg-slate-950/80 border border-slate-850/80 p-4 rounded-xl flex items-center gap-3">
@@ -242,11 +245,11 @@ export default function CorporatePortal({ onTriggerContact }: CorporatePortalPro
           <div className="space-y-3.5 pt-2 relative z-10">
             <span className="text-[10px] text-indigo-400 font-bold uppercase tracking-wider font-mono block">Contact Us</span>
             <a
-              href="mailto:info@i8.games"
+              href="mailto:info@i8s.games"
               className="w-full py-3 px-4 bg-indigo-650 hover:bg-indigo-550 text-white rounded-xl text-xs font-bold font-sans flex items-center justify-center gap-2.5 transition-all shadow-md shadow-indigo-700/10 hover:scale-[1.01] duration-150 cursor-pointer text-center"
             >
               <Mail className="w-4 h-4" />
-              <span>info@i8.games</span>
+              <span>info@i8s.games</span>
             </a>
             <p className="text-[9px] text-center text-slate-500 font-mono block">
               Typical response time: within 24 hours

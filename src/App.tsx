@@ -66,7 +66,7 @@ export default function App() {
           <span>•</span>
           <a href="#solutions" className="hover:text-indigo-400 transition-colors">AI Solutions</a>
           <span>•</span>
-          <a href="mailto:info@i8.games" className="hover:text-indigo-400 transition-colors">Contact us</a>
+          <a href="mailto:info@i8s.games" className="hover:text-indigo-400 transition-colors">info@i8s.games</a>
         </div>
       </footer>
 
@@ -97,10 +97,10 @@ export default function App() {
                 Please transmit your deployment parameters, usage metrics, and business requirements to our partnerships team:
               </p>
               <a 
-                href="mailto:info@i8.games"
+                href="mailto:info@i8s.games"
                 className="block text-center w-full py-2.5 bg-indigo-650 hover:bg-indigo-500 text-white rounded-lg text-xs font-bold font-sans mt-2 duration-150 transition-colors"
               >
-                info@i8.games
+                info@i8s.games
               </a>
             </div>
             <div className="text-[9px] text-center text-slate-500 font-mono">
