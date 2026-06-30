@@ -1,4 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&display=swap');
 @import "tailwindcss";
+
+@theme {
+  --font-sans: "Outfit", "Inter", sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
 
 /* Sleek futuristic scrollbars for game console panels */
 .custom-scrollbar::-webkit-scrollbar {
@@ -11,18 +18,32 @@
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background: rgba(99, 102, 241, 0.25);
+  background: rgba(234, 179, 8, 0.25);
   border-radius: 4px;
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: rgba(99, 102, 241, 0.45);
+  background: rgba(234, 179, 8, 0.45);
 }
 
-/* Fluid responsive layout corrections */
 body {
-  background-color: #020617;
-  color: #f8fafc;
+  background-color: #050508;
+  color: #f1f5f9;
+  font-family: var(--font-sans);
   overflow-x: hidden;
 }
+
+/* Gold Gradient Glow effects */
+.gold-text-glow {
+  text-shadow: 0 0 12px rgba(234, 179, 8, 0.35);
+}
+
+.gold-border-glow {
+  box-shadow: 0 0 15px rgba(234, 179, 8, 0.1);
+}
+
+.green-text-glow {
+  text-shadow: 0 0 12px rgba(16, 185, 129, 0.4);
+}
+
 

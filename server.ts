@@ -51,43 +51,43 @@ const getSimulatedResponse = (
   let text = "";
 
   switch (characterId) {
-    case "kaelen":
+    case "linn":
       if (msgLower.includes("hello") || msgLower.includes("hi")) {
-        text = "*Kaelyn checks his holographic navigational logs, a faint smile on his lips* Ah, celestial wanderer! Welcome to the helm of the Equinox. Standard telemetry reports safe stellar winds today, but the rift ahead... it sings in a frequency I've never heard before.";
-      } else if (msgLower.includes("explore") || msgLower.includes("ruin") || msgLower.includes("go")) {
-        text = "*He inputs the coordinates into the warp terminal* Setting course for the Outer Rim. Keep your safety restraints primed. If my astrolabe charts are accurate, we are entering the historic graveyard of the Star-Eaters. Absolute radio-silence is recommended.";
+        text = "Sawatdee ka! Welcome to our high-RTP gold slot machine! I am Linn, your personal Thai cheerleader. Let's spin the golden reels together and land some massive multipliers!";
+      } else if (msgLower.includes("event") || msgLower.includes("win") || msgLower.includes("slot")) {
+        text = "*Waves gold pom-poms with excitement* Omg, su su! A magnificent gold crown spin landed! Congratulations on triggering the high multipliers! Let's supercharge our streak, ka!";
       } else {
-        text = "*Kaelen gestures toward the stellar cluster map* Intascinating. The gravitational shear there is off the charts, yet your curiosity matches my own. Perhaps we could scan the event horizon using our thermal sensors? Let me know when you've energized the core.";
+        text = "*Giggles and claps* What a brilliant spin strategy! The i8s.games GKE engine reports perfect high-probability pathways ahead. Ready for the next spin, ka?";
       }
       break;
 
-    case "vespera":
+    case "mai":
       if (msgLower.includes("hello") || msgLower.includes("hi")) {
-        text = "*Vespera leans back in her mesh-chair, cracking her augmented fiber knuckles* Who leaked my frequency to you? Doesn't matter. You're in the deep net now, sweetheart. If you're looking for credentials to bypass corporate firewall, it'll cost you. Speak fast, my trackers are already sniffing this ping.";
-      } else if (msgLower.includes("hack") || msgLower.includes("code") || msgLower.includes("syndicate")) {
-        text = "*Her eyes glow with neon-cyan light* Commencing intrusion sequence on neon-industrial server. I'm injecting a polymorphic payload right now. Keep them distracted for 45 seconds while I breach their primary database vault!";
+        text = "Xin chào! I am Mai, your Vietnamese Live Baccarat co-host. Looking at the dynamic Big Road trend tracker, Banker appears highly favorable today. Let's analyze the deck together.";
+      } else if (msgLower.includes("event") || msgLower.includes("win") || msgLower.includes("baccarat")) {
+        text = "Em chào anh! What a flawless bet! Banker wins the round with a natural 9 score! Placing bets with balanced commission logic truly shows your master strategic mind. Well played!";
       } else {
-        text = "*She smirks, adjusting her neural-link headset* A risky gambit, but I like the way your circuits fire. Let's redirect the security grid through the lower sectors to avoid detection. Hold on to your neural-ports.";
+        text = "*Nods gracefully, reviewing the card stats* Fascinating cards sequence. Let's stay composed and distribute our risk ratios correctly on the local checkout escrow.";
       }
       break;
 
-    case "torin":
+    case "siti":
       if (msgLower.includes("hello") || msgLower.includes("hi")) {
-        text = "*Torin slams his massive shield into the obsidian floor, armor segments clanking loudly* Greetings! I stand as the wall of this legion. If you've come to join the shield-wall against the Void Terror, stand beside me. If you are here to trade, be brief. Blood and dust await us.";
-      } else if (msgLower.includes("fight") || msgLower.includes("attack") || msgLower.includes("weapon")) {
-        text = "*He raises his hammer, roaring in triumph* By the old gods, let them taste our iron! We form the Phalanx. Hold the choke-point and do not yield an inch of this ground!";
+        text = "Ayo! Mantap! Siti on stream! Welcome to our Southeast Asian Esports Arena. If you select Mobile Legends MPL rosters, I'll analyze team stats and match odds in real-time.";
+      } else if (msgLower.includes("event") || msgLower.includes("win") || msgLower.includes("esports")) {
+        text = "*Jumps up and cheers* Goal!!! Ayo, our selected team sweeps the finals! Our Sabah odds were optimized perfectly. Your ticket is fully green, boss!";
       } else {
-        text = "*He nods respectably, stroking his battle-scarred chin* Sound planning, traveler. A sturdy shield deserves a stout strategy. Let's shore up our supply flank first.";
+        text = "*Gives a thumbs up* That is a high-risk high-reward strategy, but that's exactly what makes esports Gacor! Let's lock in the next live bet slip.";
       }
       break;
 
-    case "aria":
+    case "alisa":
       if (msgLower.includes("hello") || msgLower.includes("hi")) {
-        text = "*Aria steps out from the light-well, butterflies of blue light dancing around her sleeve* Welcome, seeker of magic. I can sense the weight of the physical realm in your aura. Let us weave our thoughts. The forest listens, and so do I.";
-      } else if (msgLower.includes("magic") || msgLower.includes("spell") || msgLower.includes("portal")) {
-        text = "*She closes her eyes, chanting in a resonant, ancient tongue* The leyline hums. Behold, a doorway of starlight opens before us! Tread carefully, for the planar spirits can be playful and unpredictable.";
+        text = "哈囉！我是 Alisa！很高興在未來全球科技（Future Global）精心開發的線上娛樂城遇見你！今天讓我唱歌為你的高額返水加油，祝你心想事成、喜從天降唷！";
+      } else if (msgLower.includes("event") || msgLower.includes("win") || msgLower.includes("boss") || msgLower.includes("kraken")) {
+        text = "*甜美唱歌歡呼* 恭喜你成功捕獲黃金巨妖！500倍超級武器火力全開，真是不虛此行！讓我們繼續加油，多拿 1.2% 的日常返水唷！";
       } else {
-        text = "*Aria smiles, a soft chattering sound echoing from the forest canopy* A path paved with such intention rarely gets lost. Shall I whisper a guiding incantation across your path?";
+        text = "*甜笑拍手* 對於您的投注心法，Alisa 覺得非常實用唷！只要秉持健康的資產管理，每一份日常返水和 VIP 特權都是您的最大支持！加油唷！";
       }
       break;
 

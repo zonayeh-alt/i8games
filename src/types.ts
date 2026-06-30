@@ -1,50 +1,54 @@
-export interface Character {
-  id: string;
+export type CountryCode = "TH" | "VN" | "ID" | "MY" | "PH" | "SG";
+
+export interface CountryConfig {
+  code: CountryCode;
   name: string;
-  title: string;
-  gameName: string;
-  avatarSeed: string; // Used for customized initials/styling fallback
-  avatarUrl?: string; // Loaded dynamically or generated via Imagen/Gemini 2.5
-  bio: string;
-  voiceName: "Zephyr" | "Kore" | "Fenrir" | "Puck" | "Charon";
-  personalityTraits: string[];
-  systemPromptTemplate: string;
-  stats: {
-    combat: number;
-    wisdom: number;
-    intellect: number;
-    stealth: number;
-  };
+  flag: string;
+  currency: string;
+  localBankNames: string[];
+  gatewayLogo: string;
 }
 
-export interface Scenario {
+export interface JackpotConfig {
+  grand: number;
+  major: number;
+  minor: number;
+  currency: string;
+}
+
+export interface LiveWin {
   id: string;
+  username: string;
+  gameName: string;
+  amount: number;
+  currency: string;
+  timestamp: string;
+  country: CountryCode;
+}
+
+export interface EsportsMatch {
+  id: string;
+  game: string;
+  teamA: string;
+  teamB: string;
+  oddsA: number;
+  oddsB: number;
+  oddsTie?: number;
+  startTime: string;
+  status: "LIVE" | "UPCOMING";
+  category: "Sports" | "Esports";
+  tournament: string;
+  score?: string;
+}
+
+export interface PromoCard {
+  id: string;
+  badge: string;
   title: string;
   description: string;
-  loreContext: string;
-}
-
-export interface ChatMessage {
-  id: string;
-  role: "user" | "assistant";
-  content: string;
-  timestamp: string;
-  audioUrl?: string; // Playable blob URL
-  latencyMs?: number; // Response telemetry
-  simulated?: boolean; // Label whether fallback was triggered
-}
-
-export interface OrchestrationSettings {
-  temperature: number;
-  safetyLevel: "low" | "medium" | "high";
-  showPromptEditor: boolean;
-  activeScenarioId: string;
-  autoSpeak: boolean;
-  systemPromptOverride: string;
-}
-
-export interface LogEntry {
-  timestamp: string;
-  type: "info" | "api" | "error" | "voice";
-  message: string;
+  bonusPercentage: number;
+  maxAmount: number;
+  minDeposit: number;
+  terms: string;
+  bgGradient: string;
 }
