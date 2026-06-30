@@ -12,9 +12,9 @@ export default function VipPortal({ balance, onUpdateBalance, onTriggerNotificat
   const [accumulatedBets, setAccumulatedBets] = useState(24500); // simulated lifetime turnover
 
   const currentTier = accumulatedBets >= 100000 
-    ? { name: "Royal i8", code: "ROYAL", nextLevel: "MAX", req: 100000, perk: "0.8% Unlimited Rebate + Personal Concierge Manager" }
+    ? { name: "Royal Future Global", code: "ROYAL", nextLevel: "MAX", req: 100000, perk: "0.8% Unlimited Rebate + Personal Concierge Manager" }
     : accumulatedBets >= 50000 
-      ? { name: "Diamond", code: "DIAMOND", nextLevel: "Royal i8", req: 100000, perk: "0.6% Unlimited Rebate + Birthday Gift 2,000 USDT" }
+      ? { name: "Diamond", code: "DIAMOND", nextLevel: "Royal Future Global", req: 100000, perk: "0.6% Unlimited Rebate + Birthday Gift 2,000 USDT" }
       : accumulatedBets >= 20000 
         ? { name: "Platinum", code: "PLATINUM", nextLevel: "Diamond", req: 50000, perk: "0.5% Cash Rebate + Personal Priority Queue Support" }
         : { name: "Gold Scholar", code: "GOLD", nextLevel: "Platinum", req: 20000, perk: "0.4% Daily Cash Rebate" };

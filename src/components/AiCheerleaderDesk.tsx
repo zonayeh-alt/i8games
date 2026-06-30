@@ -127,7 +127,7 @@ export default function AiCheerleaderDesk() {
     {
       id: "welcome",
       role: "assistant",
-      content: "Sawatdee ka! 🇹🇭 I am Linn, your personal AI Cheerleader! I'm synchronized with the i8s.games slots lobby matrices. Spin the reels, and I'll cheer you on to Golden Crowns in real time! Ask me anything, or simulate game scores below!",
+      content: "Sawatdee ka! 🇹🇭 I am Linn, your personal AI Cheerleader! I'm synchronized with the Future Global Technology slots lobby matrices. Spin the reels, and I'll cheer you on to Golden Crowns in real time! Ask me anything, or simulate game scores below!",
       timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
     }
   ]);

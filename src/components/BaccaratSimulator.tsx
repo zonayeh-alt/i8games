@@ -201,7 +201,7 @@ export default function BaccaratSimulator({ balance, onUpdateBalance, onTriggerN
         <div>
           <div className="flex items-center gap-2">
             <span className="px-2.5 py-0.5 bg-indigo-950 text-indigo-400 border border-indigo-900 text-[10px] font-mono font-bold uppercase rounded tracking-widest">
-              i8 VIP LIVE AGENT
+              FUTURE GLOBAL LIVE AGENT
             </span>
             <div className="text-[10px] text-yellow-400 font-mono font-bold bg-yellow-950 border border-yellow-900/60 px-2 py-0.5 rounded flex items-center">
               <Activity className="w-3 h-3 mr-1" /> No Commission Standard

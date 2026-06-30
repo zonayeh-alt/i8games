@@ -109,7 +109,7 @@ export default function SlotSimulator({ balance, onUpdateBalance, onTriggerNotif
         <div>
           <div className="flex items-center gap-2">
             <span className="px-2 py-0.5 bg-yellow-950 text-yellow-400 border border-yellow-900 text-[10px] font-mono font-bold uppercase rounded tracking-widest">
-              i8 GOLDEN MEGA-WAYS
+              FUTURE GLOBAL MEGA-WAYS
             </span>
             <div className="flex items-center text-[10px] text-emerald-400 font-bold bg-emerald-950/40 border border-emerald-900/60 px-1.5 py-0.5 rounded">
               <Flame className="w-3.5 h-3.5 text-emerald-400 mr-0.5" />

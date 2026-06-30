@@ -167,7 +167,7 @@ export default function FishingArcade({ balance, onUpdateBalance, onTriggerNotif
         <div>
           <div className="flex items-center gap-2">
             <span className="px-2.5 py-0.5 bg-cyan-950 text-cyan-400 border border-cyan-900 text-[10px] font-mono font-bold uppercase rounded tracking-widest">
-              i8 PREMIUM FISH SHOOTER
+              FUTURE GLOBAL FISH SHOOTER
             </span>
             <div className="text-[10px] text-yellow-400 font-bold bg-yellow-950/40 border border-yellow-900/60 px-1.5 py-0.5 rounded flex items-center">
               <Compass className="w-3.5 h-3.5 mr-0.5 animate-spin" /> Auto-aim Locked

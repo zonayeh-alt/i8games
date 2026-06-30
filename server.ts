@@ -57,7 +57,7 @@ const getSimulatedResponse = (
       } else if (msgLower.includes("event") || msgLower.includes("win") || msgLower.includes("slot")) {
         text = "*Waves gold pom-poms with excitement* Omg, su su! A magnificent gold crown spin landed! Congratulations on triggering the high multipliers! Let's supercharge our streak, ka!";
       } else {
-        text = "*Giggles and claps* What a brilliant spin strategy! The i8s.games GKE engine reports perfect high-probability pathways ahead. Ready for the next spin, ka?";
+        text = "*Giggles and claps* What a brilliant spin strategy! The Future Global Technology GKE engine reports perfect high-probability pathways ahead. Ready for the next spin, ka?";
       }
       break;
 
@@ -92,7 +92,7 @@ const getSimulatedResponse = (
       break;
 
     default:
-      text = "Hello! I am a general gaming AI agent at i8s.games. We are currently evaluating Gaming AI models.";
+      text = "Hello! I am a general gaming AI agent at Future Global Technology. We are currently evaluating Gaming AI models.";
   }
 
   return { text, durationMs: 400 };
@@ -103,7 +103,7 @@ app.get("/api/config", (req, res) => {
   const hasKey = !!getApiKeyString();
   res.json({
     hasKey,
-    info: "i8s.games AI Platform Orchestration Hub Active",
+    info: "Future Global Technology AI Platform Orchestration Hub Active",
     models: ["gemini-3.5-flash", "gemini-3.1-pro-preview", "gemini-3.1-flash-tts-preview", "gemini-2.5-flash-image"],
   });
 });
@@ -335,7 +335,7 @@ async function startServer() {
   }
 
   app.listen(PORT, "0.0.0.0", () => {
-    console.log(`[i8s.games Server] Running on http://localhost:${PORT} under NODE_ENV=${process.env.NODE_ENV}`);
+    console.log(`[Future Global Server] Running on http://localhost:${PORT} under NODE_ENV=${process.env.NODE_ENV}`);
   });
 }
 

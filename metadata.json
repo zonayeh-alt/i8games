@@ -1,6 +1,6 @@
 {
-  "name": "i8s.games",
-  "description": "i8s.games (由未來全球科技 Future Global 研發) — 東南亞線上娛樂與多WAY遊戲開發平台，基於 GKE 的高可靠高並發微服務架構，搭載分佈式數據庫集群與 GenAI 驅動的虛擬 AI 啦啦隊與實時美女互動主播系統。",
+  "name": "Future Global Technology",
+  "description": "Future Global Technology (Gaming / Asia) — 亞洲頂尖線上娛樂遊戲發行與軟體營運平台。基於 Google Kubernetes Engine (GKE) 高可靠微服務、分佈式數據庫、線上賭場遊戲、與 GenAI 驅動的美女互動啦啦隊 (AI Avatar) 實時主播系統。",
   "requestFramePermissions": ["microphone"],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }
